@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>필수 입력 정보</title>
+    <style>
+        body {
+            font-family: "Pretendard", "Noto Sans KR", sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        fieldset {
+            width: 420px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 20px 25px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0 8px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-row label {
+            width: 100px;
+            font-weight: 600;
+        }
+
+        .form-row input[type="text"],
+        .form-row input[type="password"],
+        .form-row select {
+            flex: 1;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .form-row input:focus {
+            border-color: #0078ff;
+            outline: none;
+        }
+
+        button {
+            margin-left: 6px;
+            padding: 6px 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+
+            <div class="form-row">
+                <label for="id">ID</label>
+                <input type="text" id="id" placeholder="아이디 10글자 이내">
+                <button type="button">중복 확인</button>
+            </div>
+
+            <div class="form-row">
+                <label for="pw">비밀번호</label>
+                <input type="password" id="pw" placeholder="영문,숫자,특수문자 포함 8자 이상">
+            </div>
+
+            <div class="form-row">
+                <label for="pw-check">비밀번호 확인</label>
+                <input type="password" id="pw-check">
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+                <select>
+                    <option>직접입력</option>
+                    <option>@naver.com</option>
+                    <option>@gmail.com</option>
+                    <option>@daum.net</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+</html>

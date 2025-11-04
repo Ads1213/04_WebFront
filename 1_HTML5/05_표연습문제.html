@@ -8,20 +8,31 @@
 
     <style>
         thead {
-            background-color: aqua;
+            background-color: red;
         }
 
         tbody {
             background-color: orange;
         }
 
+        tbody th {
+            background-color: lightgray;
+        }
+
+        tbody td {
+            text-align: center;
+        }   
+
         tfoot {
             background-color: yellow;
         }
 
-        tbody th,
         tfoot th {
-            background-color: pink;
+            background-color: lightgray;
+        }
+
+        tfoot td {
+            text-align: center;
         }
     </style>
 </head>
@@ -99,6 +110,74 @@
                 <td>7</td>
                 <td colspan="2">8</td>
             </tr>
+
+    </table>
+
+    <hr>
+
+    <table border="1">
+       <tr>
+        <td>1</td>
+        <td>2</td>
+        <td rowspan="2">3</td>
+        <td>4</td>
+       </tr> 
+       <tr>
+        <td colspan="2">5</td>
+        <td rowspan="2">6</td>
+       </tr>
+       <tr>
+        <td>7</td>
+        <td colspan="2">8</td>
+       </tr>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="5">맨체스터 유나이티드</th>
+            </tr>
+        </thead>
+        <tr>
+            <th rowspan="5">선수리스트</th>
+            <th>선수이름</th>
+            <th>나이</th>
+            <th>포지션</th>
+            <th colspan="2">연봉</th>
+        </tr>
+        <tr>
+            <td>카제미루</td>
+            <td>33</td>
+            <td>수비형 미드필더</td>
+            <td>341억 4천만원</td>
+        </tr>
+        <tr>
+            <td>브루노 페르난데스</td>
+            <td>29</td>
+            <td>공격형 미드필더</td>
+            <td>292억 5천만원</td>
+        </tr>
+        <tr>
+            <td>마티아스 데 리흐트</td>
+            <td>26</td>
+            <td>중앙 수비수</td>
+            <td>189억 9천만원</td>
+        </tr>
+        <tr>
+            <td>해리 메과이어</td>
+            <td>32</td>
+            <td>중앙수비수</td>
+            <td>185억 7천만원</td>
+        </tr>
+    <tfoot>
+        <tr>
+            <th colspan="2">연봉 총합</th>
+            <td colspan="3">1,009억 6천만원</td>
+        </tr>
+    </tfoot>
+
 
     </table>
 

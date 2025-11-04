@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_영역 관련 태그</title>
+
+    <style>
+        div,
+        span {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>영역을 나누는 형식(성질)</h1>
+
+    <pre>
+        <H3>block 형식</H3>
+        - 항상 새로운 줄에서 시작
+        - 이전 요소의 아래에 위치(블럭)
+        - 크기를 지정하는 width, height 속성을 사용할 수 있음
+    
+        ex) p/pre(문단 나누기), h1 ~ h6
+        hr (수평선 사용하여 화면 나누기), ul, ol, li(목록)
+        div (영역 나누기)
+    </pre>
+
+    <pre>
+        <h3>inline 형식</h3>
+        - 동일한 줄에 다른 inline 요소와 나란히 배치
+        - 크기를 지정하는 width, height 속성을 사용할 수 없음(콘텐츠의 너비만큼 차지)
+        ex) a(링크), img(이미지), span(영역 나누기)
+        strong(굵게), em(기울임), br(줄바꿈)
+
+    </pre>
+
+    <hr>
+
+    <h2>block(div) / inline(span) 차이점 1 :
+        줄바꿈(개행)
+    </h2>
+
+    <h3>div태그</h3>
+    <p>
+        block 형식의 태그는 한 줄을 모두 차지하기 때문에<br>
+        뒤에 오는 내용은 다음줄에 작성이 된다.<br>
+        항상 새로운 줄에서 시작합니다.<br>
+        div 태그도 block 형식이므로 새로운 줄에서 시작합니다.
+    </p>
+
+    <div>첫번째 영역</div>
+    <div>두번째 영역</div>
+    <div>세번째 영역</div>
+
+    <hr>
+
+    <h3>span태그</h3>
+    <p>
+        inline 형식의 태그는 한 줄 내에서 일정한 칸을 차지하기 때문에<br>
+        뒤에 오는 내용은 줄이 바뀌지 않고 옆에 붙어 출력된다.<br>
+        span 태그도 inline 형식이므로 같은 줄에 작성이 됩니다.
+    </p>
+
+    <span>첫번째 레슨</span>
+    <span>두번째 레슨</span>
+    <span>세번째 레슨</span>
+
+    <hr>
+
+    <h2>block(div) / inline(span) 차이점 2 :
+        영역 지정
+    </h2>
+    <ul>
+        <li>block : 사각형 박스 형태로 영역을 지정</li>
+        <li>inline : 내부에 작성된 내용(content) 단위로
+            영역을 지정</li>
+    </ul>
+
+    <div style="background-color: lightcyan;">
+        This is a hot spot<br>
+        숨 쉬듯 찾는 네 밥상<br>
+        단골이 된 넌 fall in love<br>
+        참을 수 없는 맛<br>
+        우린 in the kitchen<br>
+        Cookin' it up what you're craving<br>
+        나의 입맛대로 saucin'<br>
+        And now the world's gone mad<br>
+        You don't need to think too much<br>
+        씹고 뜯고 맛보고 즐기다 가면 돼<br>
+        Yeah yeah yeah<br>
+        깊이 스며들어 in your mouth<br>
+        Guilty pleasure never killed nobody 드셔봐<br>
+        이빨 사이 낀 SPAGHETTI<br>
+        빼고 싶니 bon appétit<br>
+        그냥 포기해 어차피<br>
+        Eat it up eat it eat it up<br>
+        머릿속 낀 SSERAFIM<br>
+    </div>
+
+    <span style="background-color: lightyellow;">
+        This is a hot spot<br>
+        숨 쉬듯 찾는 네 밥상<br>
+        단골이 된 넌 fall in love<br>
+        참을 수 없는 맛<br>
+        우린 in the kitchen<br>
+        Cookin' it up what you're craving<br>
+        나의 입맛대로 saucin'<br>
+        And now the world's gone mad<br>
+        You don't need to think too much<br>
+        씹고 뜯고 맛보고 즐기다 가면 돼<br>
+        Yeah yeah yeah<br>
+        깊이 스며들어 in your mouth<br>
+        Guilty pleasure never killed nobody 드셔봐<br>
+        이빨 사이 낀 SPAGHETTI<br>
+        빼고 싶니 bon appétit<br>
+        그냥 포기해 어차피<br>
+        Eat it up eat it eat it up<br>
+        머릿속 낀 SSERAFIM<br>
+    </span>
+
+    <hr>
+    <h2>block(div) / inline(span) 차이점 3 :
+        크기 지정(width, height)
+    </h2>
+
+    <ul>
+        <li>block : 크기 지정 가능</li>
+        <li>inline : 크기 지정 불가능</li>
+    </ul>
+
+    <h3>div 태그</h3>
+
+    <div style="width: 200px; height: 200px;">div 박스</div>
+    <div style="width: 200px; height: 200px;">div 박스</div>
+
+    <h3>span 태그</h3>
+
+    <span style="width: 200px; height: 200px; background-color: lightgreen;">span 박스</span>
+    <span style="width: 200px; height: 200px; background-color: lightgoldenrodyellow;">span 박스</span>
+
+
+    <hr>
+    <hr>
+    <hr>
+
+    <h2>iframe 태그</h2>
+    <p>웹 문서 내부에 다른 웹문서를 추가하는 태그
+        <br>
+        inline 형식이지만 크기 지정 가능
+    </p>
+
+    <iframe src="05_표연습문제.html" width="800px" height="1000px"></iframe>
+
+
+</body>
+
+<!-- Visual Studio Git 사용법:
+    1. 보기 -> Git 변경 내용 (또는 Ctrl+Shift+G G)
+    2. Git 저장소 초기화 (아직 하지 않은 경우)
+    3. + 버튼을 클릭하여 변경 사항 스테이징
+    4. 커밋 메시지 입력
+    5. 모두 커밋 클릭
+    6. ... (추가 작업) 클릭
+    7. 푸시 대상 -> 원격 저장소 선택
+    또는 동기화 버튼을 사용하여 커밋된 모든 변경 사항 푸시
+-->
+
+</html>
