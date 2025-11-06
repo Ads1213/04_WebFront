@@ -1,0 +1,42 @@
+#test1 > p:only-child {
+    background-color: lightblue;
+    /* child는 뒤에서 앞으로 해석 */
+}
+
+#test2 > pre:only-of-type {
+    background-color: yellowgreen;
+    /* 지정된 요소가 오직 하나인지 */
+    /* only-of-type은 앞에서 뒤로 해석 */
+}
+
+#test3 > p:empty {
+    background-color: greenyellow;
+    height: 30px;
+    /* 공백의 경우 공간이 없어서 공간을 만들어줘야 적용됨. */
+}
+
+#test4-1, #test4-2, .test4-3 {
+    background-color: yellow;
+    color: red;
+}
+
+/* #test5-1 후손 중
+클래스가 c5인 요소를 선택 */
+#test5-1 .c5 {
+    background-color: aqua;
+    /* 후손은 띄어쓰기 */
+}
+
+/* #test5-2인 자식 중
+클래스가 c5인 li 요소만 선택 
+*/
+
+#test5-2 li.c5 {
+    background-color: burlywood;
+    /* 조건이 클래스가 특정 요소일 경우 띄어쓰기 x */
+}
+
+.test6.c6 {
+    background-color: red;
+}
+
