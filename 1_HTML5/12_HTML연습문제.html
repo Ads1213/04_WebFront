@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_HTML연습문제</title>
+</head>
+
+<body>
+
+    <form>
+        <h1>회원 가입</h1>
+
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <!-- th도 열에 포함 -->
+                    <td>
+                        <input type="text" placeholder="아이디 10글자 이내">
+                    </td>
+                    <td>
+                        <button type="submit">중복 확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>비밀번호</th>
+                    <td colspan="2">
+                        <!-- 열이 2개인 비밀번호와 비밀번호 확인 테이블 데이터에 colspan="2"를 주지 않으면,
+                        3열로 구성되어 있는 테이블인 아이디와 email의 버튼이 밀려난다. -->
+                        <input type="password" size="30" placeholder="영문,숫자,특수문자 포함 8자 이상">
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td colspan="2">
+                        <input type="password" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="email">
+                    </td>
+                    <td>
+                        <select>
+                            <option>직접 입력</option>
+                            <option>naver.com</option>
+                            <option>daum.net</option>
+                            <option>google.com</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+
+            프로필 사진 <input type="file"> <br><br>
+            <!-- input type file로 하면 파일 선택 버튼으로 설정 가능 -->
+
+            <!-- 성별 : 
+            <input type="radio" name="gender" id="male"> 
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female"> 
+            <label for="female">여자</label>
+            
+            <br><br>
+            생년월일 : <input type="date"> -->
+
+
+            성별 :
+            <label>
+                <!-- input 태그를 label 태그로 감쌀 경우 
+                for 속성을 사용하지 않고도, 
+                텍스트를 클릭해도 선택 가능 -->
+                <input type="radio" value="man" name="gender" checked> 남자
+                <!-- type이 radio일 경우 실제 전송될 데이터 값이 설정되며,
+                화면에 직접 표시되지 않지만, 서버에는 gender=man으로 전송됨 -->
+                <!-- HTML 폼 데이터가 서버로 전송되기 위해서는
+                반드시 Key=Value 쌍의 구조를 갖춰야 함!!!-->
+            </label>
+            <label>
+                <input type="radio" value="woman" name="gender"> 여자
+                <!-- 입력 필드류는 name만 설정해도 사용자에게 데이터를 입력 받을 때
+                입력받은 데이터 value 값이 자동으로 서버에 전송되지만,
+                버튼류는 name과 value 모두 개발자가 미리 지정해줘야 함 -->
+            </label>
+            
+            <br><br>
+
+            생년월일 : <input type="date" name="dateIn"><br><br>
+            <!--사용자에게 데이터를 입력받는 필드에서는 
+            value 속성을 HTML 코드에 미리 정의하지 않아도 
+            사용자의 입력에 따라 value가 자동으로 
+            생성/변경되어 서버에 전송됨!!!-->
+
+            취미<br>
+            <label>
+            <input type="checkbox" name="hobby" id="baseball">
+            야구
+            </label>
+            &nbsp;
+            <label>
+            <input type="checkbox" name="hobby" id="basketball">
+            농구
+            </label>
+            &nbsp;
+            <label>
+            <input type="checkbox" name="hobby" id="soccer">
+            축구
+            </labe>
+            &nbsp;
+            <label><br>
+            <input type="checkbox" name="hobby" id="study" checked>
+            공부
+            </labe>
+            &nbsp;
+            <label>
+            <input type="checkbox" name="hobby" id="playMusic">
+            음악감상
+            </label>
+            &nbsp;
+            <label><br>
+            <input type="checkbox" name="hobby" id="etc">
+            기타
+            </label>
+            &nbsp;
+            <input tpye="text" name="etcContent">
+
+            <br>
+
+            <p>자기소개</p>
+            <textarea rows="10" cols="80" style="resize: none;"></textarea>
+        </fieldset>
+        <br>
+        <button type="reset">회원가입</button> 
+        <button type="reset">다시입력</button> 
+        <button type="reset">이전으로</button>
+    </form>
+
+</body>
+
+</html>
